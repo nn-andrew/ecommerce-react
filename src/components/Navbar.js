@@ -19,26 +19,22 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle" to="/hoodies" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Hoodies
-              </a>
+              </Link>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><Link to="/" className="dropdown-item">View all</Link></li>
+                <li><Link to="/hoodies" className="dropdown-item">View all</Link></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle" to="/sweaters" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Sweaters
-              </a>
+              </Link>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><Link to="/" className="dropdown-item">View all</Link></li>
+                <li><Link to="/sweaters" className="dropdown-item">View all</Link></li>
               </ul>
             </li>
           </ul>
-          {/* <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form> */}
           <form className="d-flex">
             <Link to="/favorites">
               <button className="btn btn-secondary rounded-3 m-2" type="submit">♥ {favoritedItemsCount}</button>

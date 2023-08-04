@@ -10,6 +10,8 @@ import { FavoriteProvider } from './contexts/FavoriteContext';
 import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 import MainLayout from './layouts/MainLayout';
 import { ItemsProvider } from './contexts/ItemsContext'
+import HoodiesPage from './pages/HoodiesPage';
+import SweatersPage from './pages/SweatersPage';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
                 <Route path="/item/:id" element={<ItemPage />} />
                 <Route path="shopping-cart" element={<ShoppingCartPage />} />
                 <Route path="favorites" element={<FavoritedItemsPage />} />
+                <Route path="hoodies" element={<HoodiesPage />} />
+                <Route path="sweaters" element={<SweatersPage />} />
               </Routes>
             </MainLayout>
           </Router>
