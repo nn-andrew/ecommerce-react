@@ -2,17 +2,12 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FavoriteContext } from './FavoriteContext';
 import { ItemsContext } from '../contexts/ItemsContext';
+import { FavoriteButton } from './FavoriteButton';
 
 const Card = (props) => {
   const { id } = props;
   const { favoritedItems, toggleFavorite } = useContext(FavoriteContext);
   const { itemsMap } = useContext(ItemsContext);
-  const isFavorited = favoritedItems.includes(id);
-
-  const handleFavoriteToggle = (event) => {
-    event.preventDefault();
-    toggleFavorite(id);
-  }
 
   return (
     <Link to={`/item/${id}`}>
@@ -25,9 +20,7 @@ const Card = (props) => {
               <p className="card-text text-light">{"$" + itemsMap.get(id).get("price").toFixed(2) + " USD"}</p>
             </div>
             <div className="col-3">
-              <button onClick={handleFavoriteToggle} className={`btn rounded-circle ${isFavorited ? "btn-danger" : "btn-secondary"}`} type="button">
-                ♥
-              </button>
+              <FavoriteButton itemId={id} />
             </div>
           </div>
         </div>

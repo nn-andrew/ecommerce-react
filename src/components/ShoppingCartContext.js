@@ -11,12 +11,12 @@ const ShoppingCartProvider = ({ children }) => {
 
   const addShoppingCartItem = (item) => {
     setShoppingCartItems([...shoppingCartItems, item]);
-  }
+  };
 
   const removeShoppingCartIndex = (index) => {
     shoppingCartItems.splice(index, 1);
     setShoppingCartItems([...shoppingCartItems]);
-  }
+  };
 
   return (
     <ShoppingCartContext.Provider value={{ shoppingCartItems, addShoppingCartItem, removeShoppingCartIndex }}>

@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/"><img src="../assets/OSAKA.png" /></a>
+        <Link className="navbar-brand" to="/"><img src="../assets/OSAKA.png" /></Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -23,7 +23,7 @@ const Navbar = () => {
                 Hoodies
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">Summer 2023 Collection</a></li>
+                <li><Link to="/" className="dropdown-item">View all</Link></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
@@ -31,7 +31,7 @@ const Navbar = () => {
                 Sweaters
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">Summer 2023 Collection</a></li>
+                <li><Link to="/" className="dropdown-item">View all</Link></li>
               </ul>
             </li>
           </ul>
@@ -40,7 +40,9 @@ const Navbar = () => {
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form> */}
           <form className="d-flex">
-            <button className="btn btn-secondary rounded-3 m-2" type="submit">♥ {favoritedItemsCount}</button>
+            <Link to="/favorites">
+              <button className="btn btn-secondary rounded-3 m-2" type="submit">♥ {favoritedItemsCount}</button>
+            </Link>
           </form>
           <form className="d-flex">
             <Link to="/shopping-cart">

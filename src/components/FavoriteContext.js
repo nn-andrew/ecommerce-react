@@ -16,13 +16,18 @@ const FavoriteProvider = ({ children }) => {
     } else {
       setFavoritedItems([...favoritedItems, itemId]);
     }
-  }
+  };
+
+  const removeFavoritedIndex = (index) => {
+    favoritedItems.splice(index, 1);
+    setFavoritedItems([...favoritedItems]);
+  };
 
   return (
-    <FavoriteContext.Provider value={{ favoritedItems, toggleFavorite }}>
+    <FavoriteContext.Provider value={{ favoritedItems, toggleFavorite, removeFavoritedIndex }}>
       {children}
     </FavoriteContext.Provider>
-  )
+  );
 };
 
 export { FavoriteContext, FavoriteProvider }

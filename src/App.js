@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ItemPage from './pages/ItemPage';
 import ShoppingCartPage from './pages/ShoppingCartPage';
+import FavoritedItemsPage from './pages/FavoritedItemsPage';
 import { FavoriteProvider } from './components/FavoriteContext';
 import { ShoppingCartProvider } from './components/ShoppingCartContext';
 import MainLayout from './layouts/MainLayout';
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path="/" element={<HomePage />} />
                 <Route path="/item/:id" element={<ItemPage />} />
                 <Route path="shopping-cart" element={<ShoppingCartPage />} />
+                <Route path="favorites" element={<FavoritedItemsPage />} />
               </Routes>
             </MainLayout>
           </Router>

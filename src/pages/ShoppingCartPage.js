@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ItemsContext } from '../contexts/ItemsContext';
 import { ShoppingCartContext } from '../components/ShoppingCartContext';
 
@@ -31,8 +31,12 @@ const ShoppingCartPage = () => {
       <div className="row">
         <div className="col">  
           {shoppingCartItems.map((item, index) => (
-            <div className="row d-flex align-items-center">
-              <img className="col-2" src={`${itemsMap.get(item.split(',')[0]).get("imageSource")}`} />
+            <div className="row align-items-center">
+              <div className="col">
+                <Link to={`../item/${item.split(',')[0]}`}>
+                  <img className="img-fluid" src={`${itemsMap.get(item.split(',')[0]).get("imageSource")}`} />
+                </Link>
+              </div>
               <div className="col">
                 <div className="row">
                   {itemsMap.get(item.split(',')[0]).get("name")}

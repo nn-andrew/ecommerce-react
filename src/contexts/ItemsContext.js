@@ -6,16 +6,22 @@ const ItemsProvider = ({children}) => {
   const itemsMap = new Map();
 
   const hoodie1 = new Map();
-  hoodie1.set('name', 'Hoodie');
+  hoodie1.set('name', 'Hoodie Grey');
   hoodie1.set('imageSource', '/assets/hoodie1.jpg');
   hoodie1.set('price', 40);
 
+  const hoodie2 = new Map();
+  hoodie2.set('name', 'Hoodie Green');
+  hoodie2.set('imageSource', '/assets/hoodie2.jpg');
+  hoodie2.set('price', 50);
+
   const sweater1 = new Map();
-  sweater1.set('name', 'Sweater');
+  sweater1.set('name', 'Sweater Grey');
   sweater1.set('imageSource', '/assets/sweater1.jpg');
   sweater1.set('price', 35);
 
   itemsMap.set('hoodie1', hoodie1);
+  itemsMap.set('hoodie2', hoodie2);
   itemsMap.set('sweater1', sweater1);
 
   return (

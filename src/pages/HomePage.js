@@ -13,7 +13,7 @@ const HomePage = () => {
         <h1>New arrivals</h1>
       </div>
       <div className="row">
-        <CardGrid />
+        <CardGrid itemIds={["hoodie1", "hoodie2", "sweater1"]} />
       </div>
     </div>
   );
