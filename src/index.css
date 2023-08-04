@@ -31,8 +31,9 @@ code {
   width: 200px;
 }
 
-.shopping-cart img {
+.icon {
   width: 20px;
+  height: 20px;
   filter: invert(100%);
 }
 

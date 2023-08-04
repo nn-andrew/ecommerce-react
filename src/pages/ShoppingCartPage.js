@@ -50,7 +50,7 @@ const ShoppingCartPage = () => {
               </div>
               <div className="col">
                 <button className="btn btn-secondary" onClick={() => handleRemoveShoppingCartIndex(index)}>
-                  x
+                  <img className="icon" src="../assets/remove.png" />
                 </button>
               </div>
             </div>

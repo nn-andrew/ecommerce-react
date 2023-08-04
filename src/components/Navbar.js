@@ -42,7 +42,7 @@ const Navbar = () => {
           </form>
           <form className="d-flex">
             <Link to="/shopping-cart">
-              <button className="btn btn-secondary rounded-3 m-2 shopping-cart" type="submit"><img src="../assets/shopping_cart.png" /> {shoppingCartItemsCount}</button>
+              <button className="btn btn-secondary rounded-3 m-2" type="submit"><img className="icon" src="../assets/shopping_cart.png" /> {shoppingCartItemsCount}</button>
             </Link>
           </form>
         </div>

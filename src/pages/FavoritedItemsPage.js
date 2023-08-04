@@ -40,7 +40,7 @@ const FavoritedItemsPage = () => {
               </div>
               <div className="col">
                 <button className="btn btn-secondary" onClick={() => handleRemoveFavoritedIndex(index)}>
-                  x
+                  <img className="icon" src="../assets/remove.png" />
                 </button>
               </div>
             </div>
