@@ -6,8 +6,8 @@ import HomePage from './pages/HomePage';
 import ItemPage from './pages/ItemPage';
 import ShoppingCartPage from './pages/ShoppingCartPage';
 import FavoritedItemsPage from './pages/FavoritedItemsPage';
-import { FavoriteProvider } from './components/FavoriteContext';
-import { ShoppingCartProvider } from './components/ShoppingCartContext';
+import { FavoriteProvider } from './contexts/FavoriteContext';
+import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 import MainLayout from './layouts/MainLayout';
 import { ItemsProvider } from './contexts/ItemsContext'
 

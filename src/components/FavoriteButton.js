@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FavoriteContext } from './FavoriteContext';
+import { FavoriteContext } from '../contexts/FavoriteContext';
 
 const FavoriteButton = (props) => {
   const { itemId } = props;

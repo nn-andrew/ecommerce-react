@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ItemsContext } from '../contexts/ItemsContext';
-import { FavoriteContext } from '../components/FavoriteContext';
+import { FavoriteContext } from '../contexts/FavoriteContext';
 
 const FavoritedItemsPage = () => {
   const { itemsMap } = useContext(ItemsContext);

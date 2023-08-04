@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { ItemsContext } from '../contexts/ItemsContext';
-import { ShoppingCartContext } from '../components/ShoppingCartContext';
+import { ShoppingCartContext } from '../contexts/ShoppingCartContext';
 import { FavoriteButton } from '../components/FavoriteButton';
 
 const ItemPage = () => {

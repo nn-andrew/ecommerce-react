@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { FavoriteContext } from './FavoriteContext';
+import { FavoriteContext } from '../contexts/FavoriteContext';
 import { ItemsContext } from '../contexts/ItemsContext';
 import { FavoriteButton } from './FavoriteButton';
 

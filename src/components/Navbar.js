@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { FavoriteContext } from './FavoriteContext';
-import { ShoppingCartContext} from './ShoppingCartContext';
+import { FavoriteContext } from '../contexts/FavoriteContext';
+import { ShoppingCartContext} from '../contexts/ShoppingCartContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
