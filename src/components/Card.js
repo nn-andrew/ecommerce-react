@@ -6,7 +6,6 @@ import { FavoriteButton } from './FavoriteButton';
 
 const Card = (props) => {
   const { id } = props;
-  const { favoritedItems, toggleFavorite } = useContext(FavoriteContext);
   const { itemsMap } = useContext(ItemsContext);
 
   return (
