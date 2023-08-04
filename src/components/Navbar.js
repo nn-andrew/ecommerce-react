@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
 import { FavoriteContext } from './FavoriteContext';
-
-// import '../bootstrap-5.0.2-dist/css/bootstrap.css';
+import { ShoppingCartContext} from './ShoppingCartContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const { favoritedItems } = useContext(FavoriteContext);
   const favoritedItemsCount = favoritedItems.length;
+  const { shoppingCartItems } = useContext(ShoppingCartContext);
+  const shoppingCartItemsCount = shoppingCartItems.length;
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#"><img src="./assets/OSAKA.png" /></a>
+        <a className="navbar-brand" href="/"><img src="../assets/OSAKA.png" /></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -79,6 +80,9 @@ const Navbar = () => {
           </form>
           <form className="d-flex">
             <button className="btn btn-secondary rounded-3 m-2" type="submit">♥ {favoritedItemsCount}</button>
+          </form>
+          <form className="d-flex">
+            <button className="btn btn-secondary rounded-3 m-2 shopping-cart" type="submit"><img src="../assets/shopping_cart.png" /> {shoppingCartItemsCount}</button>
           </form>
         </div>
       </div>

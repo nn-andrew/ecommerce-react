@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,14 +17,23 @@ code {
     monospace;
 }
 
+.text-custom-light {
+  color: #f0f0f0;
+}
+
 .navbar {
   padding-left: 5%;
   padding-right: 5%;
   background-color: black;
 }
 
-.navbar img {
+.navbar-brand img {
   width: 200px;
+}
+
+.shopping-cart img {
+  width: 20px;
+  filter: invert(100%);
 }
 
 .navbar .dropdown:hover .dropdown-menu {

@@ -1,28 +1,32 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { FavoriteContext } from './FavoriteContext';
+import { ItemsContext } from '../contexts/ItemsContext';
 
 const Card = (props) => {
-  const { title, image_directory } = props;
+  const { id } = props;
   const { favoritedItems, toggleFavorite } = useContext(FavoriteContext);
-  const isFavorited = favoritedItems.includes(title);
+  const { itemsMap } = useContext(ItemsContext);
+  const isFavorited = favoritedItems.includes(id);
 
-  const handleFavoriteToggle = () => {
-    toggleFavorite(title);
+  const handleFavoriteToggle = (event) => {
+    event.preventDefault();
+    toggleFavorite(id);
   }
 
   return (
-    <a>
+    <Link to={`/item/${id}`}>
       <div className="card">
-        <img src={image_directory} className="card-img" alt="..." />
+        <img src={itemsMap.get(id).get('imageSource')} className="card-img" alt="..." />
         <div className="card-body">
-          <h5 className="card-title text-light">{title}</h5>
+          <h5 className="card-title text-light">{itemsMap.get(id).get('name')}</h5>
           <p className="card-text text-light">$40.00 USD</p>
             <button onClick={handleFavoriteToggle} className={`btn rounded-circle ${isFavorited ? "btn-danger" : "btn-secondary"}`} type="button">
               ♥
             </button>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

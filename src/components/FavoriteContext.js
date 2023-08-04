@@ -10,11 +10,11 @@ const FavoriteProvider = ({ children }) => {
     console.log(favoritedItems)
   }, [favoritedItems]);
 
-  const toggleFavorite = (itemName) => {
-    if (favoritedItems.includes(itemName)) {
-      setFavoritedItems(favoritedItems.filter((item) => item !== itemName));
+  const toggleFavorite = (itemId) => {
+    if (favoritedItems.includes(itemId)) {
+      setFavoritedItems(favoritedItems.filter((item) => item !== itemId));
     } else {
-      setFavoritedItems([...favoritedItems, itemName]);
+      setFavoritedItems([...favoritedItems, itemId]);
     }
   }
 
