@@ -7,11 +7,10 @@ const ShoppingCartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("shoppingCartItems", JSON.stringify(shoppingCartItems));
-    console.log(shoppingCartItems)
   }, [shoppingCartItems]);
 
-  const addShoppingCartItem = (itemId) => {
-    setShoppingCartItems([...shoppingCartItems, itemId]);
+  const addShoppingCartItem = (item) => {
+    setShoppingCartItems([...shoppingCartItems, item]);
   }
 
   const removeShoppingCartIndex = (index) => {

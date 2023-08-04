@@ -15,7 +15,7 @@ const ShoppingCartPage = () => {
     var res = 0;
 
     for (let i = 0; i < shoppingCartItems.length; i++) {
-      res += itemsMap.get(shoppingCartItems[i]).get("price");
+      res += itemsMap.get(shoppingCartItems[i].split(',')[0]).get("price");
     }
 
     return res;
@@ -24,16 +24,24 @@ const ShoppingCartPage = () => {
   return (
     <div className="container p-5 text-custom-light">
       <div className="row">
+        <h1>
+          Shopping Cart
+        </h1>
+      </div>
+      <div className="row">
         <div className="col">  
-          {shoppingCartItems.map((itemId, index) => (
+          {shoppingCartItems.map((item, index) => (
             <div className="row d-flex align-items-center">
-              <img className="col-2" src={`${itemsMap.get(itemId).get("imageSource")}`} />
+              <img className="col-2" src={`${itemsMap.get(item.split(',')[0]).get("imageSource")}`} />
               <div className="col">
                 <div className="row">
-                  {itemsMap.get(itemId).get("name")}
+                  {itemsMap.get(item.split(',')[0]).get("name")}
                 </div>
                 <div className="row">
-                  {"$" + itemsMap.get(itemId).get("price").toFixed(2) + " USD"}
+                  {item.split(',')[1]}
+                </div>
+                <div className="row">
+                  {"$" + itemsMap.get(item.split(',')[0]).get("price").toFixed(2) + " USD"}
                 </div>
               </div>
               <div className="col">
