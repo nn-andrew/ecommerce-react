@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ItemPage from './pages/ItemPage';
+import ShoppingCartPage from './pages/ShoppingCartPage';
 import { FavoriteProvider } from './components/FavoriteContext';
 import { ShoppingCartProvider } from './components/ShoppingCartContext';
 import MainLayout from './layouts/MainLayout';
@@ -14,14 +15,15 @@ function App() {
     <ItemsProvider>
       <ShoppingCartProvider>
         <FavoriteProvider>
-          <MainLayout>
-            <Router>
+          <Router>
+            <MainLayout>
               <Routes>
                 <Route exact path="/" element={<HomePage />} />
                 <Route path="/item/:id" element={<ItemPage />} />
+                <Route path="shopping-cart" element={<ShoppingCartPage />} />
               </Routes>
-            </Router>
-          </MainLayout>
+            </MainLayout>
+          </Router>
         </FavoriteProvider>
       </ShoppingCartProvider>
     </ItemsProvider>

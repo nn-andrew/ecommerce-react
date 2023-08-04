@@ -20,7 +20,7 @@ const Card = (props) => {
         <img src={itemsMap.get(id).get('imageSource')} className="card-img" alt="..." />
         <div className="card-body">
           <h5 className="card-title text-light">{itemsMap.get(id).get('name')}</h5>
-          <p className="card-text text-light">$40.00 USD</p>
+          <p className="card-text text-light">{"$" + itemsMap.get(id).get("price").toFixed(2) + " USD"}</p>
             <button onClick={handleFavoriteToggle} className={`btn rounded-circle ${isFavorited ? "btn-danger" : "btn-secondary"}`} type="button">
               ♥
             </button>

@@ -9,7 +9,7 @@ const ItemPage = () => {
   const { addShoppingCartItem } = useContext(ShoppingCartContext);
 
   const handleAddToShoppingCart = () => {
-    addShoppingCartItem();
+    addShoppingCartItem(id);
   }
 
   return (

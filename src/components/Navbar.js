@@ -42,28 +42,6 @@ const Navbar = () => {
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pants
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Jackets
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Sweaters
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -82,7 +60,9 @@ const Navbar = () => {
             <button className="btn btn-secondary rounded-3 m-2" type="submit">♥ {favoritedItemsCount}</button>
           </form>
           <form className="d-flex">
-            <button className="btn btn-secondary rounded-3 m-2 shopping-cart" type="submit"><img src="../assets/shopping_cart.png" /> {shoppingCartItemsCount}</button>
+            <Link to="/shopping-cart">
+              <button className="btn btn-secondary rounded-3 m-2 shopping-cart" type="submit"><img src="../assets/shopping_cart.png" /> {shoppingCartItemsCount}</button>
+            </Link>
           </form>
         </div>
       </div>

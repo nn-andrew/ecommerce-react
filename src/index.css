@@ -52,3 +52,8 @@ code {
 .card:hover {
   background-color: #1f1f1f;
 }
+
+#checkout-panel {
+  background-color: #161616;
+  border-radius: 8px;
+}

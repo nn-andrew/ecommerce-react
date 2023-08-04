@@ -14,8 +14,13 @@ const ShoppingCartProvider = ({ children }) => {
     setShoppingCartItems([...shoppingCartItems, itemId]);
   }
 
+  const removeShoppingCartIndex = (index) => {
+    shoppingCartItems.splice(index, 1);
+    setShoppingCartItems([...shoppingCartItems]);
+  }
+
   return (
-    <ShoppingCartContext.Provider value={{ shoppingCartItems, addShoppingCartItem }}>
+    <ShoppingCartContext.Provider value={{ shoppingCartItems, addShoppingCartItem, removeShoppingCartIndex }}>
       {children}
     </ShoppingCartContext.Provider>
   )
