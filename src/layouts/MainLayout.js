@@ -8,6 +8,8 @@ const MainLayout = ({children}) => {
       <main>
         { children }
       </main>
+      <div className="p-5"></div>
+      <div className="p-5"></div>
     </div>
   )
 }

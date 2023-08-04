@@ -3,7 +3,7 @@ import Card from './Card';
 
 const CardGrid = () => {
   return (
-    <div className="row row-cols-1 row-cols-md-3 g-4 p-5">
+    <div className="row row-cols-1 row-cols-md-3">
       <div className="col">
         <Card name={"Hoodie"} id={"hoodie1"} image_directory={"./assets/hoodie1.jpg"} />
       </div>

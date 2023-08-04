@@ -5,9 +5,16 @@ import CardGrid from '../components/CardGrid';
 
 const HomePage = () => {
   return (
-    <div>
-      <Hero />
-      <CardGrid />
+    <div className="container text-custom-light">
+      <div className="row">
+        <Hero />
+      </div>
+      <div className="row text-center">
+        <h1>New arrivals</h1>
+      </div>
+      <div className="row">
+        <CardGrid />
+      </div>
     </div>
   );
 };
