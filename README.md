@@ -1,5 +1,7 @@
 # Osaka E-Commerce project
-A project made for learning React.js
+## <a href="https://main--osaka-react.netlify.app/">Live demo</a>
+
+A project made to teach myself React.js.
 
 This app uses React.js and Bootstrap, and supports favoriting items and adding items to cart.
 
