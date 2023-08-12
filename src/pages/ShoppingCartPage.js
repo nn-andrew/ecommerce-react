@@ -68,7 +68,7 @@ const ShoppingCartPage = () => {
             </div>
             <div className="row">
               <div className="col text-start">
-                <p>Shippping</p>
+                <p>Shipping</p>
               </div>
               <div className="col text-end">
                 <p>FREE</p>
